@@ -19,6 +19,21 @@ Route::get('/sportshoes', function () {
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/products', 'ProductsController@index')->name('products.index');
-Route::post('/products', 'ProductsController@store')->name('products.store');
-Route::get('/products/create', 'ProductsController@create')->name('products.create');
+Route::get('/products', 'ProductController@index')->name('product.index');
+Route::post('/products', 'ProductController@store')->name('product.store');
+Route::get('/products/create', 'ProductsController@create')->name('product.create');
+
+Route::get('/cart', function () {
+  return view('cart');
+})->name('cart');
+
+Route::get('/user','UsersController@show')->name('user.profile')->middleware('auth');
+Route::get('/user/config','UsersController@edit')->name('user.edit')->middleware('auth');
+//Route::put('/user/{id}', 'userController@update')->name('user.update')-middleware('auth');
+
+Route::get('/user','UsersController@show')->name('user.profile')->middleware('auth');
+Route::get('/user/config','UsersController@edit')->name('user.edit')->middleware('auth');
+//Route::put('/user/{id}', 'userController@update')->name('user.update')-middleware('auth');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
