@@ -21,11 +21,14 @@
                   <a class="nav-link text-light font-weight-bold px-3" href="contact.php">CONTACTO</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link text-light font-weight-bold px-3" href="{{url('/discount')}}">PROMOCIONES</a>
+                  <a class="nav-link text-light font-weight-bold px-3" href="discounts">PROMOCIONES</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link text-light font-weight-bold px-3" href="register.php">REGISTRARSE</a>
+                  <a class="nav-link text-light font-weight-bold px-3" href="register">REGISTRARSE</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light font-weight-bold px-3" href="login">LOGIN</a>
+                  </li>
                 </ul>
                 <div>
                   <li>

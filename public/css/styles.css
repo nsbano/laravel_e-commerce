@@ -193,7 +193,9 @@ clear: both;
   display: flex;
   flex-flow: column;
   }
-
+.img_descuentos {
+  :
+}
 ul{
  padding: 0;
  margin: 0;
