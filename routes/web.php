@@ -19,14 +19,16 @@ Route::get('/sportshoes', function () {
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/products', 'ProductController@index')->name('product.index');
+Route::get('/product', 'ProductController@index')->name('product.index');
 Route::post('/products', 'ProductController@store')->name('product.store');
 Route::get('/products/create', 'ProductsController@create')->name('product.create');
 
 Route::get('/cart', function () {
   return view('cart');
 })->name('cart');
-
+Route::get('/faqs', function () {
+    return view('faqs');
+})->name('faqs');
 Route::get('/user','UsersController@show')->name('user.profile')->middleware('auth');
 Route::get('/user/config','UsersController@edit')->name('user.edit')->middleware('auth');
 //Route::put('/user/{id}', 'userController@update')->name('user.update')-middleware('auth');

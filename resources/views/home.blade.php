@@ -38,73 +38,203 @@
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="container marketing">
+        @foreach ($products as $product)
+           <div class="col-md-4">
+             <div class="card text-center">
+               <div class="card-body">
+                 <img src='{{$product->image}}' alt="">
+                 <h5 class="card-title">{{$product->name}}</h5>
+                 <p class="card-text">{{$product->description}}</p>
+                   <h3><span>$</span>{{$product->price}}</h3>
+                 <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
+               </div>
+             </div>
+           </div>
+           <!--Modal-->
+           <div class="modal" id="modal" >
+             <div class="modal-de-compra">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+               <div class="container1">
+                 <img src='{{$product->image}}' alt="">
+                 <p>{{$product->description}}</p>
+               </div>
+               <div class="container2">
+                 <h3>{{$product->name}}</h3>
+                 <hr style="border: 1px inset;width:90%;">
+                 <p>{{$product->description}}</p>
+                 <hr style="border: 1px inset;width:90%;">
+                 <h4>${{$product->price}}  c/u</h4>
+                 <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
+                 <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
+               </div>
+             </div>
+           </div>
+           @endforeach
 
-          <!-- Three columns of text below the carousel -->
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="img/zapatillas_1.jpg" alt="zapa1">
-              <h2>Sneakers.</h2>
-              <p>Un estilo de zapatilla de calle para combinar con looks casual y urbanos. Las vimos en la pasarela con prendas de vestir.</p>
-              <p><a class="btn btn-secondary" href="product.html" role="button">View details &raquo;</a></p>
+           @foreach ($products as $product)
+              <div class="col-md-4">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <img src='{{$product->image}}' alt="">
+                    <h5 class="card-title">{{$product->name}}</h5>
+                    <p class="card-text">{{$product->description}}</p>
+                      <h3><span>$</span>{{$product->price}}</h3>
+                    <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
+                  </div>
+                </div>
+              </div>
+              <!--Modal-->
+              <div class="modal" id="modal" >
+                <div class="modal-de-compra">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                  <div class="container1">
+                    <img src='{{$product->image}}' alt="">
+                    <p>{{$product->description}}</p>
+                  </div>
+                  <div class="container2">
+                    <h3>{{$product->name}}</h3>
+                    <hr style="border: 1px inset;width:90%;">
+                    <p>{{$product->description}}</p>
+                    <hr style="border: 1px inset;width:90%;">
+                    <h4>${{$product->price}}  c/u</h4>
+                    <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              @endforeach
 
-            </div><!-- /.col-lg-4 -->
+              @foreach ($products as $product)
+                 <div class="col-md-4">
+                   <div class="card text-center">
+                     <div class="card-body">
+                       <img src='{{$product->image}}' alt="">
+                       <h5 class="card-title">{{$product->name}}</h5>
+                       <p class="card-text">{{$product->description}}</p>
+                         <h3><span>$</span>{{$product->price}}</h3>
+                       <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
+                     </div>
+                   </div>
+                 </div>
+                 <!--Modal-->
+                 <div class="modal" id="modal" >
+                   <div class="modal-de-compra">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                     <div class="container1">
+                       <img src='{{$product->image}}' alt="">
+                       <p>{{$product->description}}</p>
+                     </div>
+                     <div class="container2">
+                       <h3>{{$product->name}}</h3>
+                       <hr style="border: 1px inset;width:90%;">
+                       <p>{{$product->description}}</p>
+                       <hr style="border: 1px inset;width:90%;">
+                       <h4>${{$product->price}}  c/u</h4>
+                       <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
+                       <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
+                     </div>
+                   </div>
+                 </div>
+                 @endforeach
 
-		  <div class="col-lg-4">
-            <img src="img/zapatillas_2.jpg" alt="zapa2">
-              <h2>Deportivas</h2>
-              <p>Reinventa su tecnologia de amortiguacion con su nueva tecnologia y su diseño disruptivo y vanguardista</p>
-              <p><a class="btn btn-secondary" href="product.html" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img src="img/zapatillas_3.jpg" alt="zapa3">
-              <h2> Recreativa</h2>
-              <p>Absorbe el impacto de tu pie cuando aterriza y lo convierte
-en energía para la siguiente pisada.</p>
-              <p><a class="btn btn-secondary" href="product.html" role="button">View details &raquo;</a></p>
+                 @foreach ($products as $product)
+                    <div class="col-md-4">
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <img src='{{$product->image}}' alt="">
+                          <h5 class="card-title">{{$product->name}}</h5>
+                          <p class="card-text">{{$product->description}}</p>
+                            <h3><span>$</span>{{$product->price}}</h3>
+                          <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Modal-->
+                    <div class="modal" id="modal" >
+                      <div class="modal-de-compra">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                        <div class="container1">
+                          <img src='{{$product->image}}' alt="">
+                          <p>{{$product->description}}</p>
+                        </div>
+                        <div class="container2">
+                          <h3>{{$product->name}}</h3>
+                          <hr style="border: 1px inset;width:90%;">
+                          <p>{{$product->description}}</p>
+                          <hr style="border: 1px inset;width:90%;">
+                          <h4>${{$product->price}}  c/u</h4>
+                          <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
+                          <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
+                        </div>
+                      </div>
+                    </div>
+                    @endforeach
 
-            </div><!-- /.col-lg-4 -->
-          </div><!-- /.row -->
+                    @foreach ($products as $product)
+                       <div class="col-md-4">
+                         <div class="card text-center">
+                           <div class="card-body">
+                             <img src='{{$product->image}}' alt="">
+                             <h5 class="card-title">{{$product->name}}</h5>
+                             <p class="card-text">{{$product->description}}</p>
+                               <h3><span>$</span>{{$product->price}}</h3>
+                             <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
+                           </div>
+                         </div>
+                       </div>
+                       <!--Modal-->
+                       <div class="modal" id="modal" >
+                         <div class="modal-de-compra">
+                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                           <div class="container1">
+                             <img src='{{$product->image}}' alt="">
+                             <p>{{$product->description}}</p>
+                           </div>
+                           <div class="container2">
+                             <h3>{{$product->name}}</h3>
+                             <hr style="border: 1px inset;width:90%;">
+                             <p>{{$product->description}}</p>
+                             <hr style="border: 1px inset;width:90%;">
+                             <h4>${{$product->price}}  c/u</h4>
+                             <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
+                             <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
+                           </div>
+                         </div>
+                       </div>
+                       @endforeach
 
-
-
-     <!-- banner intermedio:-------------------------->
-		  <!-- <div class="banner-intermedio">
-			  <a href="/precio-especial/">
-				  <img class="loaded" src="https://dafitistaticar-a.akamaihd.net/cms/Banner-Rebajas_Home-GENERAL.gif">
-			  </a>
-		  </div> -->
-          <!--/. banner intermedio-------------------->
-
-
-
-
-          <!-- Three columns of text below the carousel -->
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="img/zapatillas_1.jpg" alt="zapa1">
-              <h2>Sneakers.</h2>
-              <p>Un estilo de zapatilla de calle para combinar con looks casual y urbanos. Las vimos en la pasarela con prendas de vestir.</p>
-              <p><a class="btn btn-secondary" href="product.html" role="button">View details &raquo;</a></p>
-
-            </div><!-- /.col-lg-4 -->
-
-		  <div class="col-lg-4">
-            <img src="img/zapatillas_2.jpg" alt="zapa2">
-              <h2>Deportivas</h2>
-              <p>Reinventa su tecnologia de amortiguacion con su nueva tecnologia y su diseño disruptivo y vanguardista</p>
-              <p><a class="btn btn-secondary" href="product.html" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img src="img/zapatillas_3.jpg" alt="zapa3">
-              <h2> Recreativa</h2>
-              <p>Absorbe el impacto de tu pie cuando aterriza y lo convierte
-en energía para la siguiente pisada.</p>
-              <p><a class="btn btn-secondary" href="product.html" role="button">View details &raquo;</a></p>
-
-            </div><!-- /.col-lg-4 -->
-          </div><!-- /.row -->
-
+                       @foreach ($products as $product)
+                          <div class="col-md-4">
+                            <div class="card text-center">
+                              <div class="card-body">
+                                <img src='{{$product->image}}' alt="">
+                                <h5 class="card-title">{{$product->name}}</h5>
+                                <p class="card-text">{{$product->description}}</p>
+                                  <h3><span>$</span>{{$product->price}}</h3>
+                                <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
+                              </div>
+                            </div>
+                          </div>
+                          <!--Modal-->
+                          <div class="modal" id="modal" >
+                            <div class="modal-de-compra">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                              <div class="container1">
+                                <img src='{{$product->image}}' alt="">
+                                <p>{{$product->description}}</p>
+                              </div>
+                              <div class="container2">
+                                <h3>{{$product->name}}</h3>
+                                <hr style="border: 1px inset;width:90%;">
+                                <p>{{$product->description}}</p>
+                                <hr style="border: 1px inset;width:90%;">
+                                <h4>${{$product->price}}  c/u</h4>
+                                <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
+                              </div>
+                            </div>
+                          </div>
+                          @endforeach
           <!-- START THE FEATURETTES -------->
 
           <hr class="featurette-divider">
