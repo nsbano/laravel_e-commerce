@@ -26,7 +26,6 @@ class HomeController extends Controller
     {
       $products = Product::get();
 
-
       return view('home')->with('products',$products);
     }
 }

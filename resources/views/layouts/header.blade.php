@@ -1,4 +1,4 @@
-<header>
+
   <nav class="navbar navbar-expand-md navbar-light fixed-top">
       <a class="navbar-brand"><img src="img/LogoSporShoes.png"></a>
       <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
@@ -39,4 +39,3 @@
           </form>
       </div>
   </nav>
-</header>

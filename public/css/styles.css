@@ -38,7 +38,11 @@ background: rgb(150,0,24,0.8);
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
+
+
+.modal {
+  width: 60%;
+}
 .col-md-4 {
   padding-top:1.5rem;
   padding-bottom: 1.5rem;

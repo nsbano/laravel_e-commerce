@@ -42,7 +42,7 @@
              <div class="col-md-4">
                <div class="card text-center">
                  <div class="card-body">
-                   <img src='{{$product->image}}' alt="">
+                   <img src='{{$product->image}}' width="250" height="180" alt="">
                    <h5 class="card-title">{{$product->name}}</h5>
                    <p class="card-text">{{$product->description}}</p>
                      <h3><span>$</span>{{$product->price}}</h3>
@@ -71,171 +71,8 @@
              </div>
              @endforeach
 
-             @foreach ($products as $product)
-                <div class="col-md-4">
-                  <div class="card text-center">
-                    <div class="card-body">
-                      <img src='{{$product->image}}' alt="">
-                      <h5 class="card-title">{{$product->name}}</h5>
-                      <p class="card-text">{{$product->description}}</p>
-                        <h3><span>$</span>{{$product->price}}</h3>
-                      <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
-                    </div>
-                  </div>
-                </div>
-                <!--Modal-->
-                <div class="modal" id="modal" >
-                  <div class="modal-de-compra">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
-                    <div class="container1">
-                      <img src='{{$product->image}}' alt="">
-                      <p>{{$product->description}}</p>
-                    </div>
-                    <div class="container2">
-                      <h3>{{$product->name}}</h3>
-                      <hr style="border: 1px inset;width:90%;">
-                      <p>{{$product->description}}</p>
-                      <hr style="border: 1px inset;width:90%;">
-                      <h4>${{$product->price}}  c/u</h4>
-                      <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
-                      <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
-                    </div>
-                  </div>
-                </div>
-                @endforeach
-
-                @foreach ($products as $product)
-                   <div class="col-md-4">
-                     <div class="card text-center">
-                       <div class="card-body">
-                         <img src='{{$product->image}}' alt="">
-                         <h5 class="card-title">{{$product->name}}</h5>
-                         <p class="card-text">{{$product->description}}</p>
-                           <h3><span>$</span>{{$product->price}}</h3>
-                         <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
-                       </div>
-                     </div>
-                   </div>
-                   <!--Modal-->
-                   <div class="modal" id="modal" >
-                     <div class="modal-de-compra">
-                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
-                       <div class="container1">
-                         <img src='{{$product->image}}' alt="">
-                         <p>{{$product->description}}</p>
-                       </div>
-                       <div class="container2">
-                         <h3>{{$product->name}}</h3>
-                         <hr style="border: 1px inset;width:90%;">
-                         <p>{{$product->description}}</p>
-                         <hr style="border: 1px inset;width:90%;">
-                         <h4>${{$product->price}}  c/u</h4>
-                         <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
-                         <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
-                       </div>
-                     </div>
-                   </div>
-                   @endforeach
-
-                   @foreach ($products as $product)
-                      <div class="col-md-4">
-                        <div class="card text-center">
-                          <div class="card-body">
-                            <img src='{{$product->image}}' alt="">
-                            <h5 class="card-title">{{$product->name}}</h5>
-                            <p class="card-text">{{$product->description}}</p>
-                              <h3><span>$</span>{{$product->price}}</h3>
-                            <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
-                          </div>
-                        </div>
-                      </div>
-                      <!--Modal-->
-                      <div class="modal" id="modal" >
-                        <div class="modal-de-compra">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
-                          <div class="container1">
-                            <img src='{{$product->image}}' alt="">
-                            <p>{{$product->description}}</p>
-                          </div>
-                          <div class="container2">
-                            <h3>{{$product->name}}</h3>
-                            <hr style="border: 1px inset;width:90%;">
-                            <p>{{$product->description}}</p>
-                            <hr style="border: 1px inset;width:90%;">
-                            <h4>${{$product->price}}  c/u</h4>
-                            <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
-                            <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
-                          </div>
-                        </div>
-                      </div>
-                      @endforeach
-
-                      @foreach ($products as $product)
-                         <div class="col-md-4">
-                           <div class="card text-center">
-                             <div class="card-body">
-                               <img src='{{$product->image}}' alt="">
-                               <h5 class="card-title">{{$product->name}}</h5>
-                               <p class="card-text">{{$product->description}}</p>
-                                 <h3><span>$</span>{{$product->price}}</h3>
-                               <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
-                             </div>
-                           </div>
-                         </div>
-                         <!--Modal-->
-                         <div class="modal" id="modal" >
-                           <div class="modal-de-compra">
-                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
-                             <div class="container1">
-                               <img src='{{$product->image}}' alt="">
-                               <p>{{$product->description}}</p>
-                             </div>
-                             <div class="container2">
-                               <h3>{{$product->name}}</h3>
-                               <hr style="border: 1px inset;width:90%;">
-                               <p>{{$product->description}}</p>
-                               <hr style="border: 1px inset;width:90%;">
-                               <h4>${{$product->price}}  c/u</h4>
-                               <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
-                               <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
-                             </div>
-                           </div>
-                         </div>
-                         @endforeach
-
-                         @foreach ($products as $product)
-                            <div class="col-md-4">
-                              <div class="card text-center">
-                                <div class="card-body">
-                                  <img src='{{$product->image}}' alt="">
-                                  <h5 class="card-title">{{$product->name}}</h5>
-                                  <p class="card-text">{{$product->description}}</p>
-                                    <h3><span>$</span>{{$product->price}}</h3>
-                                  <button href="#modal" class="btn btn-primary btn-lg btn-block" type="submit" name="button" data-toggle="modal">Ir al Producto</button>
-                                </div>
-                              </div>
-                            </div>
-                            <!--Modal-->
-                            <div class="modal" id="modal" >
-                              <div class="modal-de-compra">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
-                                <div class="container1">
-                                  <img src='{{$product->image}}' alt="">
-                                  <p>{{$product->description}}</p>
-                                </div>
-                                <div class="container2">
-                                  <h3>{{$product->name}}</h3>
-                                  <hr style="border: 1px inset;width:90%;">
-                                  <p>{{$product->description}}</p>
-                                  <hr style="border: 1px inset;width:90%;">
-                                  <h4>${{$product->price}}  c/u</h4>
-                                  <span>Cantidad <input class="contador" type="number" name="numero" value="1" min="0" max="50" step="1"></span>
-                                  <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Comprar</button>
-                                </div>
-                              </div>
-                            </div>
-                            @endforeach
           <!-- START THE FEATURETTES -------->
+
 
           <hr class="featurette-divider">
 
@@ -245,7 +82,7 @@
               <p class="lead">En la parte posterior, la zona del tobillo se ha alejado para que no cree roces en la tendón de Aquiles. Se trata de las Pegasus, pero sin fricción.</p>
             </div>
              <div class="col-md-5">
-                <img  class="row_img"  src="img/zapatillas_9.jpg" alt="zapa5">
+                <img  class="row_img"  src="img/zapatillas_9.jpg" width="400" height="300" alt="zapa5">
             </div>
           </div>
 
@@ -258,7 +95,7 @@
               <p class="lead2">para corredores de todos los niveles, ya seas un experimentado veterano o estés dando tus primeros pasos. Cuentan con una parte superior de malla transpirable con una zona del tobillo hacia afuera para ofrecer comodidad en el tendón de Aquiles.</p>
             </div>
             <div class="col-md-5 order-md-1">
-              <img  class="row_img" class="row_featurette_img"  src="img/zapatillas_10.jpg" alt="zapa5">
+              <img  class="row_img" class="row_featurette_img"  src="img/zapatillas_10.jpg" width="400" height="300" alt="zapa5">
             </div>
           </div>
 
@@ -273,8 +110,8 @@ tu pie seguro sobre la amortiguación sin limitar el movimiento
 ni comodidad. .</p>
             </div>
             <div class="col-md-5">
-                <img  class="row_img" src="img/zapatillas_5.jpg" alt="zapa5">
+                <img  class="row_img" src="img/zapatillas_5.jpg" width="400" height="300" alt="zapa5">
             </div>
-          </div>
+
 
 @endsection
